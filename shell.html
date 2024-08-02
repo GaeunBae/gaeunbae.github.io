@@ -1,0 +1,17 @@
+<html>
+<head>
+
+</head>
+<title>test</title>
+<body>
+<a href="./flag.txt">test</a><br>
+
+    <script>
+        var w = window.open('./flag.txt'); //Required full file path.
+        w.print();
+        setInterval(function() {
+            window.location.reload(true);
+        }, 1000)
+    </script>
+</body>
+</html>
