@@ -4,7 +4,7 @@
     <title>DOM Clobbering Example</title>
     <script>
         // JavaScript vulnerable to DOM clobbering
-        function submitForm() {
+        window.onload = function(){
             let someObject = window.hello || {};
             let script = document.createElement('script');
             script.src = someObject.url;
