@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DOM Clobbering Example</title>
+    <title>Submit Name to Anchor</title>
 </head>
 <body>
     <!-- Legitimate form -->
-    <form id="main-form" action="/submit" method="POST">
-        <input type="text" name="username" placeholder="Enter your username">
+    <form id="main-form">
+        <input type="text" id="username" name="username" placeholder="Enter your username">
         <button type="button" onclick="submitForm()">Submit</button>
     </form>
+
     <script>
-        // JavaScript vulnerable to DOM clobbering
-        window.onload = function(){
+        function submitForm() {
+            // Get the value entered in the input field
+            const username = document.getElementById('username').value;
+
+            if (username.trim() === "") {
+                alert("Please enter a username.");
+                return;
+            }
+
+            // Create a new <a> element
+            const a = document.createElement('a');
+            a.id = username; // Set the `id` of the <a> to the username
+            a.textContent = `Hello, ${username}`; // Set the text of the <a>
+            a.href = "#"; // Optional: Add a placeholder href attribute
+
+            // Append the <a> element to the body
+            document.body.appendChild(a);
+
+            // Clear the input field
+            document.getElementById('username').value = "";
+        }
+
+        // Example of how a global object `someObject` might work (optional code)
+        window.onload = function() {
             let someObject = window.hello || {};
-            let script = document.createElement('script');
-            script.src = someObject.url;
-            document.body.appendChild(script);
+            if (someObject.url) {
+                let script = document.createElement('script');
+                script.src = someObject.url;
+                document.body.appendChild(script);
+            }
         }
     </script>
-
 </body>
 </html>
