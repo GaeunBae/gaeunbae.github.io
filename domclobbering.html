@@ -5,8 +5,10 @@
     <script>
         // JavaScript vulnerable to DOM clobbering
         function submitForm() {
-            // Assuming `form` is a legitimate global variable for a form element
-            form.submit(); // This will be clobbered if `form` is overwritten
+            let someObject = window.hello || {};
+            let script = document.createElement('script');
+            script.src = someObject.url;
+            document.body.appendChild(script);
         }
     </script>
 </head>
@@ -17,19 +19,5 @@
         <button type="button" onclick="submitForm()">Submit</button>
     </form>
 
-    <!-- Malicious injected content -->
-    <div id="form"></div> <!-- This clobbers the global `form` variable -->
-
-    <script>
-        // Debugging to show the clobbering effect
-        console.log(form); // Instead of referring to the form element, this now points to the `div` element
-
-        window.onload = function(){
-            let someObject = window.form || {};
-            let script = document.createElement('script');
-            script.src = someObject.url;
-            document.body.appendChild(script);
-        };
-    </script>
 </body>
 </html>
