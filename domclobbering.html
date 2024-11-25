@@ -25,7 +25,7 @@
         console.log(form); // Instead of referring to the form element, this now points to the `div` element
 
         window.onload = function(){
-            let someObject = window.someObject || {};
+            let someObject = window.form || {};
             let script = document.createElement('script');
             script.src = someObject.url;
             document.body.appendChild(script);
