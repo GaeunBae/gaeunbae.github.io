@@ -8,8 +8,8 @@
   <p>
   <html id="cdnDomain" class="x">clobbered</html>
   <script>
-    alert(document.getElementById('cdnDomain').innerText); // Clobbered
-    alert(document.querySelector('.x').innerText); // Clobbered
+    console.log(document.getElementById('cdnDomain').innerText); // Clobbered
+    console.log(document.querySelector('.x').innerText); // Clobbered
   </script>
 </body>
 </html>
