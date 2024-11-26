@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clobber!</title>
+</head>
+<body>
+  <iframe name=a srcdoc="<iframe srcdoc='<iframe name=c srcdoc=<a/id=d&amp;amp;#x20;name=e&amp;amp;#x20;href=\controlled&amp;amp;gt;<a&amp;amp;#x20;id=d&amp;amp;gt; name=d>' name=b>"></iframe>
+  <style>@import 'https://google.com';</style>
+  <script>
+    alert(a.b.c.d.e)//controlled
+  </script>
+</body>
+</html>
