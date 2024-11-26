@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clobber!</title>
+</head>
+<body>
+  <div style="display:none" id="cdnDomain" class="x">test</div>
+  <p>
+  <html id="cdnDomain" class="x">clobbered</html>
+  <script>
+    alert(document.getElementById('cdnDomain').innerText); // Clobbered
+    alert(document.querySelector('.x').innerText); // Clobbered
+  </script>
+</body>
+</html>
