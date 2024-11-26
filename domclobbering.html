@@ -12,7 +12,20 @@
     <form id="script-form">
         <button type="button" onclick="makeScript()">Make Script!</button>
     </form>
-
+    //clobber .nodeName ///////////////////////////////////
+    <form id=x></form>
+    <form id=y>
+    <input name=nodeName>
+    </form>
+    <script>
+    console.log(document.getElementById('x').nodeName)//FORM
+    console.log(document.getElementById('y').nodeName)//[object HTMLInputElement]
+    </script>
+    
+    // clobber document.getElementById('username').value??///////////////////////////////////
+    <form id=y>
+    <input name=value>
+    </form>
     <script>
         function submitForm() {
             // Get the value entered in the input field
@@ -36,7 +49,7 @@
             document.getElementById('username').value = "";
         }
 
-        // Example of how a global object `someObject` might work (optional code)
+        // clobber window.hello///////////////////////////////////
         function makeScript() {
             let someObject = window.hello || {};
             if (someObject.url) {
