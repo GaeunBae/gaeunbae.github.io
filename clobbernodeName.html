@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Name to Anchor</title>
+</head>
+<body>
+//clobber .nodeName ///////////////////////////////////
+  <form id=x></form>
+  <form id=y>
+    <input name=nodeName>
+  </form>
+  <script>
+    console.log(document.getElementById('x').nodeName)//FORM
+    console.log(document.getElementById('y').nodeName)//[object HTMLInputElement]
+  </script>
+</body>
+</html>
