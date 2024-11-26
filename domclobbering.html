@@ -9,6 +9,9 @@
         <input type="text" id="username" name="username" placeholder="Enter your username">
         <button type="button" onclick="submitForm()">Submit</button>
     </form>
+    <form id="script-form">
+        <button type="button" onclick="makeScript()">Make Script!</button>
+    </form>
 
     <script>
         function submitForm() {
@@ -34,7 +37,7 @@
         }
 
         // Example of how a global object `someObject` might work (optional code)
-        window.onload = function() {
+        function makeScript() {
             let someObject = window.hello || {};
             if (someObject.url) {
                 let script = document.createElement('script');
