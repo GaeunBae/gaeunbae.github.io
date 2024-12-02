@@ -11,7 +11,7 @@
   <p>
   <html id="cdnDomain" class="x">clobbered</html>
   <script>
-    console.log(document.getElementById('cdnDomain').value); // Clobbered
+    console.log(document.getElementById('cdnDomain')); // Clobbered
     console.log(document.querySelector('.x').innerText); // Clobbered
   </script>
 </body>
