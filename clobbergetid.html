@@ -4,12 +4,12 @@
   <title>Clobber!</title>
 </head>
 <body>
-  <form id="cdnDomain" value="clobbered"></form>
-  <html id="cdnDomain">original1</html>
-  <html class="x">original2</html>
+  <a id="cdnDomain" value="clobbered"></a>
+  <a id="cdnDomain">original1</a>
+  <b class="x">original2</b>
   <div id="cdnDomain" class="x">test</div>
   <p>
-  <html id="cdnDomain" class="x">clobbered</html>
+  <a id="cdnDomain" class="x">clobbered</a>
   <script>
     console.log(document.getElementById('cdnDomain')); // Clobbered
     console.log(document.querySelector('.x').innerText); // Clobbered
