@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clobber!</title>
+</head>
+<body>
+  <form id=x></form>
+  <form id=y>
+  <input name=nodeName>
+  </form>
+  <script>
+  console.log(document.getElementById('x').nodeName)//FORM
+  console.log(document.getElementById('y').nodeName)//[object HTMLInputElement]
+  </script>
+</body>
+</html>
