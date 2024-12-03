@@ -1,2 +1,2 @@
 // script.js
-console.log("Hello, world! This is a simple2 JavaScript file.");
+console.log("Hello, world! This is a clobbered JavaScript file.");
