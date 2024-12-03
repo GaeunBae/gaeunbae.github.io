@@ -4,11 +4,13 @@
     <title>Clobber!</title>
 </head>
 <body>
-  <script>
+    <a id=window></a>
+    <a id=window name=someObject></a>
+    <script>
       let someObject = window.someObject || {};
       let script = document.createElement('script');
       script.src = someObject.url|| "https://gaeunbae.github.io/simple.js";
       document.body.appendChild(script);
-  </script>
+    </script>
 </body>
 </html>
