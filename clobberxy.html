@@ -3,15 +3,15 @@
 <head>
     <title>Clobber!</title>
 </head>
-<a id=x href=controlled1 y=hello1></a>
-<a id=x name=y href=controlled y=hello></a>
+//<a id=x href=controlled1 y=hello1></a>
+//<a id=x name=y href=controlled y=hello></a>
 <div id="x">
     <span id="y">Clobbering</span>
 </div>
 <body>
     
     <script>
-        console.log(x.href)//controlled
+        console.log(x.y.href)//controlled
         console.log(x.y)//controlled
     </script>
 </body>
