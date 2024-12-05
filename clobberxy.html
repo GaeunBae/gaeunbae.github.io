@@ -3,12 +3,13 @@
 <head>
     <title>Clobber!</title>
 </head>
-<a id=x></a>
+<a id=x href=controlled1 y=hello></a>
 <a id=x name=y href=controlled></a>
 <body>
     
     <script>
-        console.log(x.y.value)//controlled
+        console.log(x.href)//controlled
+        console.log(x.y)//controlled
     </script>
 </body>
 </html>
