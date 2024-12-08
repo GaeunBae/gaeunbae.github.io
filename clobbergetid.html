@@ -6,10 +6,11 @@
 <body>
   <div id="cdnDomain" class="x">original</div>
   <p>
-  <html id="cdnDomain" class="x">clobbered</html>
-  <script>
-    console.log(document.getElementById('cdnDomain').innerText); // Clobbered
-    console.log(document.querySelector('.x').innerText); // Clobbered
-  </script>
+    <html id="cdnDomain" class="x">clobbered</html>
+    <script>
+      console.log(document.getElementById('cdnDomain').innerText); // Clobbered
+      console.log(document.querySelector('.x').innerText); // Clobbered
+    </script>
+  </p>
 </body>
 </html>
