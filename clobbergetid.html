@@ -5,8 +5,7 @@
 </head>
 <body>
   <div id="cdnDomain" class="x">original</div>
-  
-  <a id="cdnDomain" name="y" class="x">clobbered</a>
+  <html id="cdnDomain" name="y" class="x">clobbered</html>
   <script>
     console.log(document.getElementById('cdnDomain').innerText); // Clobbered
     console.log(document.querySelector('.x').innerText); // Clobbered
