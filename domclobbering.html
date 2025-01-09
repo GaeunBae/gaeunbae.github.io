@@ -10,14 +10,15 @@
     </form>    
     <script>
         // clobber window.hello///////////////////////////////////
-        
-        let someObject = window.hello || {};
-        console.log(someObject.url);
-        if (someObject.url) {
-            let script = document.createElement('script');
-            script.src = someObject.url;
-            console.log(script.src);
-            document.body.appendChild(script);
+        function makeScript() {
+            let someObject = window.hello || {};
+            console.log(someObject.url);
+            if (someObject.url) {
+                let script = document.createElement('script');
+                script.src = someObject.url;
+                console.log(script.src);
+                document.body.appendChild(script);
+            }
         }
     </script>
 </body>
