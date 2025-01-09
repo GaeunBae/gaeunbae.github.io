@@ -21,6 +21,7 @@
         // clobber window.hello///////////////////////////////////
         function makeScript() {
             let someObject = window.hello || {};
+            console.log(window.hello);
             if (someObject.url) {
                 let script = document.createElement('script');
                 script.src = someObject.url;
