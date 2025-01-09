@@ -5,22 +5,14 @@
 </head>
 <body>
     <a id="hello" href="clobbered:TAINT_window_hello_25_25"></a>
-    <!-- Legitimate form -->
-    <form id="main-form">
-        <input type="text" id="username" name="username" placeholder="Enter your username">
-        <button type="button" onclick="submitForm()">Submit</button>
-    </form>
     <form id="script-form">
         <button type="button" onclick="makeScript()">Make Script!</button>
     </form>    
-    // clobber document.getElementById('username').value??///////////////////////////////////
-    <form id=y>
-        <input name=value>
-    </form>
     <script>
         // clobber window.hello///////////////////////////////////
         
         let someObject = window.hello || {};
+        console.log(someObject.url);
         if (someObject.url) {
             let script = document.createElement('script');
             script.src = someObject.url;
