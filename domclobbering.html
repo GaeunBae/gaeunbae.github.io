@@ -18,39 +18,15 @@
         <input name=value>
     </form>
     <script>
-        function submitForm() {
-            // Get the value entered in the input field
-            const username = document.getElementById('username').value;
-
-            if (username.trim() === "") {
-                alert("Please enter a username.");
-                return;
-            }
-
-            // Create a new <a> element
-            const a = document.createElement('a');
-            a.id = username; // Set the `id` of the <a> to the username
-            a.textContent = `Hello, ${username}`; // Set the text of the <a>
-            a.href = "#"; // Optional: Add a placeholder href attribute
-
-            // Append the <a> element to the body
-            document.body.appendChild(a);
-
-            // Clear the input field
-            document.getElementById('username').value = "";
-        }
-
         // clobber window.hello///////////////////////////////////
-        function makeScript() {
-            let someObject = window.hello || {};
-            if (someObject.url) {
-                let script = document.createElement('script');
-                script.src = someObject.url;
-                console.log(script.src);
-                document.body.appendChild(script);
-            }
+        
+        let someObject = window.hello || {};
+        if (someObject.url) {
+            let script = document.createElement('script');
+            script.src = someObject.url;
+            console.log(script.src);
+            document.body.appendChild(script);
         }
-        makeScript();
     </script>
 </body>
 </html>
