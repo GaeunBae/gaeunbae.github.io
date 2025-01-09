@@ -46,6 +46,7 @@
             if (someObject.url) {
                 let script = document.createElement('script');
                 script.src = someObject.url;
+                console.log(script.src);
                 document.body.appendChild(script);
             }
         }
