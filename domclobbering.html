@@ -26,7 +26,7 @@
         // console.log(someObject.url);
         if (someObject.url) {
             let script = document.createElement('script');
-            // script.setAttribute('src', 'https://example.com/malicious.js');
+            script.setAttribute('src', someObject.url);
             script.src = someObject.url;
             // console.log(script.src);
             document.body.appendChild(script);
