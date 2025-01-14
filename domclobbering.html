@@ -21,7 +21,7 @@
     </form>    
     <script>
         // clobber window.hello///////////////////////////////////
-        let someObject = window.hello || {url:"https://gaeunbae.github.io/hello.js"};
+        let someObject = window.hello || {};
         if (someObject.url) {
             let script = document.createElement('script');
             script.setAttribute('src', someObject.url);
