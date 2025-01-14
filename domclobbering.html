@@ -20,7 +20,11 @@
         <button type="button" onclick="makeScript()">Make Script!</button>
     </form>    
     <script>
-        // clobber window.hello///////////////////////////////////
+        function makeScript(){
+            window.hello = {
+                url: "https://example.com/script.js" // Replace with the actual URL of the script you want to load
+            };
+        }
         let someObject = window.hello || {};
         if (someObject.url) {
             let script = document.createElement('script');
