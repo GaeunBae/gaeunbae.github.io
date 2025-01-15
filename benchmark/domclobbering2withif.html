@@ -5,13 +5,14 @@
 </head>
 <body>
     /////clobbering payload/////
-<!--     <a id="hello" href="clobbered:TAINT_window_hello_1_1"></a> -->
+    <a id="globalConfig" href="clobbered:TAINT_window_hello_1_1"></a>
+    <a id="hello" href="clobbered:TAINT_window_hello_1_1"></a>
     ///////////////////////////
 
   
     <script>
         var s = document.createElement('script');
-        if (true){
+        if (window.hello){
             let config = window.globalConfig || {href: 'script.js'};
             s.src = config.href;
             document.body.appendChild(s);
