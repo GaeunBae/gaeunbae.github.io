@@ -26,6 +26,7 @@
             loc = window.testLocation
         } else {
             loc = window.location;
+            loc.protocol = "tempprotocol";
             }
        
         if (AMP_MODE.localDev) {
