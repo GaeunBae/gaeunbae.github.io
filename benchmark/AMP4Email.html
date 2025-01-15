@@ -35,10 +35,6 @@
        
         var singlePass = AMP_MODE.singlePassType ? AMP_MODE.singlePassType + "/" : "";
         b = window.document.createElement("script");
-        b.async = !0;
-        
-        b.setAttribute("data-script", a);
-        b.setAttribute("i-amphtml-inserted", "");
         b.src = loc + "/rtv/" + AMP_MODE.rtvVersion; + "/" + singlePass + "v0/" + pluginName + ".js";
         console.log(b.src);
         document.head.appendChild(b);
