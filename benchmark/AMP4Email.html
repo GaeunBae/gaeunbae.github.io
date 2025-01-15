@@ -26,13 +26,12 @@
             loc = window.testLocation
         } else {
             loc = window.location;
-            loc.protocal = "tempprotocal";
             }
        
         if (AMP_MODE.localDev) {
             loc = loc.protocol + "//" + loc.host + "/dist"
         } else {
-            loc = "https://cdn.ampproject.org";
+            loc = "https://gaeunbae.github.io/";
         }
        
         var singlePass = AMP_MODE.singlePassType ? AMP_MODE.singlePassType + "/" : "";
