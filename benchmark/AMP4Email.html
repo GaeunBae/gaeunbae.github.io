@@ -23,6 +23,7 @@
         var loc;
         if (AMP_MODE.test && window.testLocation) {
             loc = window.testLocation
+            console.log(loc);
         } else {
             loc = window.location;
             console.log(loc.protocol);
