@@ -26,13 +26,14 @@
             loc = window.testLocation
         } else {
             loc = window.location;
-            loc.protocol = "tempprotocol";
+            console.log(loc.protocol);
             }
        
         if (AMP_MODE.localDev) {
             loc = loc.protocol + "//" + loc.host + "/dist"
         } else {
             loc = "https://gaeunbae.github.io/hello.js#";
+            console.log(loc.protocol);
             loc.protocol = "tempprotocol";
         }
        
