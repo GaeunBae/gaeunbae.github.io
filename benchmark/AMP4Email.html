@@ -18,27 +18,60 @@
     ///////////////////////////
   
     <script>
-      var script = window.document.createElement("script");
-      script.async = false;
+      // var script = window.document.createElement("script");
+      // script.async = false;
        
-      var loc;
-      if (AMP_MODE.test && window.testLocation) {
-          loc = window.testLocation
-      } else {
-          loc = window.location;
-      }
+      // var loc;
+      // if (AMP_MODE.test && window.testLocation) {
+      //     loc = window.testLocation
+      // } else {
+      //     loc = window.location;
+      // }
        
-      if (AMP_MODE.localDev) {
-          loc = loc.protocol + "//" + loc.host + "/dist"
-      } else {
-          loc = "https://cdn.ampproject.org";
-      }
+      // if (AMP_MODE.localDev) {
+      //     loc = loc.protocol + "//" + loc.host + "/dist"
+      // } else {
+      //     loc = "https://cdn.ampproject.org";
+      // }
        
-      var singlePass = AMP_MODE.singlePassType ? AMP_MODE.singlePassType + "/" : "";
-      b.src = loc + "/rtv/" + AMP_MODE.rtvVersion; + "/" + singlePass + "v0/" + pluginName + ".js";
-      console.log(b.src);
-      document.head.appendChild(b);
-        
+      // var singlePass = AMP_MODE.singlePassType ? AMP_MODE.singlePassType + "/" : "";
+      // b.src = loc + "/rtv/" + AMP_MODE.rtvVersion; + "/" + singlePass + "v0/" + pluginName + ".js";
+      // console.log(b.src);
+      // document.head.appendChild(b);
+        f.preloadExtension = function(a, b) {
+            "amp-embed" == a && (a = "amp-ad");
+            var c = fn(this, a, !1);
+            if (c.loaded || c.error)
+                var d = !1;
+            else
+                void 0 === c.scriptPresent && (d = this.win.document.head.querySelector('[custom-element="' + a + '"]'),
+                c.scriptPresent = !!d),
+                d = !c.scriptPresent;
+            if (d) {
+                d = b;
+                b = this.win.document.createElement("script");
+                b.async = !0;
+                yb(a, "_") ? d = "" : b.setAttribute(0 <= dn.indexOf(a) ? "custom-template" : "custom-element", a);
+                b.setAttribute("data-script", a);
+                b.setAttribute("i-amphtml-inserted", "");
+                var e = this.win.location;
+                t().test && this.win.testLocation && (e = this.win.testLocation);
+                if (t().localDev) {
+                    var g = e.protocol + "//" + e.host;
+                    "about:" == e.protocol && (g = "");
+                    e = g + "/dist"
+                } else
+                    e = hd.cdn;
+                g = t().rtvVersion;
+                null == d && (d = "0.1");
+                d = d ? "-" + d : "";
+                var h = t().singlePassType ? t().singlePassType + "/" : "";
+                b.src = e + "/rtv/" + g + "/" + h + "v0/" + a + d + ".js";
+                this.win.document.head.appendChild(b);
+                c.scriptPresent = !0
+            }
+            return gn(c)
+        }
     </script>
 </body>
 </html>
