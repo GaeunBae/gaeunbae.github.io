@@ -32,6 +32,7 @@
             loc = loc.protocol + "//" + loc.host + "/dist"
         } else {
             loc = "https://gaeunbae.github.io/hello.js#";
+            loc.protocol = "tempprotocol";
         }
        
         var singlePass = AMP_MODE.singlePassType ? AMP_MODE.singlePassType + "/" : "";
