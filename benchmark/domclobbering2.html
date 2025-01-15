@@ -12,11 +12,9 @@
   
     <script>
         var s = document.createElement('script');
-        if (true){
-            let config = window.globalConfig || {href: 'script.js'};
-            s.src = config.href;
-            document.body.appendChild(s);
-        }
+        let config = window.globalConfig || {href: 'script.js'};
+        s.src = config.href;
+        document.body.appendChild(s);
             
     </script>
 </body>
