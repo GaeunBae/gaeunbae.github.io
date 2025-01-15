@@ -12,12 +12,9 @@
   
     <script>
         let someObject = window.hello || {};
-        console.log(someObject);
         if (someObject.url) {
             let script = document.createElement('script');
-            script.setAttribute('src', someObject.url);
             script.src = someObject.url;
-            console.log(someObject.url);
             document.body.appendChild(script);
         }
         
