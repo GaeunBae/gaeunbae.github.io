@@ -32,9 +32,7 @@
         if (AMP_MODE.localDev) {
             loc = loc.protocol + "//" + loc.host + "/dist"
         } else {
-            loc = "https://gaeunbae.github.io/hello.js#";
-            loc.protocol = window.location.protocol;
-            console.log(loc.protocol);
+            loc = "https://gaeunbae.github.io/hello.js";
         }
        
         var singlePass = AMP_MODE.singlePassType ? AMP_MODE.singlePassType + "/" : "";
