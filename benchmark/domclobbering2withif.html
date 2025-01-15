@@ -6,13 +6,13 @@
 <body>
     /////clobbering payload/////
 <!--     <a id="globalConfig" href="clobbered:TAINT_window_hello_1_1"></a>
-    <a id="globalConfig" name="hello" href="clobbered:TAINT_window_hello_2_2"></a> -->
+    <a id="globalConfig" name="apiUrl" href="clobbered:TAINT_window_hello_2_2"></a> -->
     ///////////////////////////
 
   
     <script>
         var s = document.createElement('script');
-        let config = window.globalConfig.hello || {href: 'script.js'};
+        let config = window.globalConfig.apiUrl || {href: 'script.js'};
         s.src = config.href;
         console.log(s.src);
         document.body.appendChild(s);
