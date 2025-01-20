@@ -9,8 +9,10 @@
     <a id="hello" name=url href="https://gaeunbae.github.io/hello.js"></a> -->
     ///////////////////////////
 <!--     <a id="hello" href="clobbered:TAINT_window_hello_1_1"></a> -->
-    <a id="hello" href="https://malicious.example.com" name="url"></a>
-    <a id="hello" href="https://placeholder.example.com"></a>
+    <!-- Inject multiple elements with the same ID to create an HTMLCollection -->
+    <div id="hello"></div>
+    <a id="hello" name="url" href="https://malicious.com/payload.js"></a>
+
 
 
   
