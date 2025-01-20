@@ -9,10 +9,13 @@
     <a id="hello" name=url href="https://gaeunbae.github.io/hello.js"></a> -->
     ///////////////////////////
 <!--     <a id="hello" href="clobbered:TAINT_window_hello_1_1"></a> -->
-    <div id="hello"></div>
     <div id="hello" name="url">
-        <a id="url" href="https://malicious.example.com"></a>
+        <a name="url" href="https://malicious.example.com"></a>
     </div>
+    <div id="hello">
+        <a name="unused" href="https://placeholder.example.com"></a>
+    </div>
+
 
 
 
