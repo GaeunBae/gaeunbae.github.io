@@ -4,8 +4,11 @@
     <title>Clobber!</title>
 </head>
 <body>
-    <form id=x name=y><input id=z value=controlled></form>
-    <form id=x></form>
+    <form id="document"> 
+        <form id="document" name="documentElement"> 
+            <input name="matches" value="malicious.js"> 
+        </form>
+    </form>
     <script>
         console.log(window.document.documentElement.matches)//controlled
     </script>
