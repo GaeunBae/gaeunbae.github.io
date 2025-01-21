@@ -24,6 +24,7 @@
         get prefix() {
             // Retrieve the 'prefix' attribute or determine a fallback value
             var t;
+            console.log(this.getAttribute("prefix"));
             return null !== (t = this.getAttribute("prefix")) && void 0 !== t
                 ? t
                 : "datetime" === this.format
