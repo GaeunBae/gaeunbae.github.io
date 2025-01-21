@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clobber!</title>
+</head>
+<body>
+    <a id="this" prefix="malicious.js">alert(1)</a> 
+    <script>
+      class RelativeTimeElement extends HTMLElement {
+        constructor() {
+            super();
+    
+            // Track instances (optional)
+            this.instances = new Set();
+            this.instances.add(this);
+    
+            // Private fields for internal state (can also use WeakMaps if necessary)
+            this._shadowRoot = this.attachShadow ? this.attachShadow({ mode: 'open' }) : null;
+            this._internalState = false;
+        }
+    
+        // Getter for the 'prefix' property
+        get prefix() {
+            // Retrieve the 'prefix' attribute or determine a fallback value
+            var t;
+            return null !== (t = this.getAttribute("prefix")) && void 0 !== t
+                ? t
+                : "datetime" === this.format
+                    ? "" // Empty string if format is 'datetime'
+                    : "on"; // Default to 'on' otherwise
+        }
+    
+        // Example method to demonstrate interaction
+        get format() {
+            // Simulate a dynamic 'format' property or use an attribute
+            return this.getAttribute("format") || "default";
+        }
+    
+        set format(value) {
+            // Allow setting the 'format' property
+            this.setAttribute("format", value);
+        }
+      }
+    
+      // Define the custom element
+      customElements.define('relative-time', RelativeTimeElement);
+      
+      // Usage Example
+      const relativeTimeElement = document.createElement('relative-time');
+      
+      // Setting attributes
+      relativeTimeElement.setAttribute('prefix', 'about');
+      relativeTimeElement.setAttribute('format', 'datetime');
+      
+      // Accessing the 'prefix' getter
+      console.log(relativeTimeElement.prefix); // Output: 'about'
+      
+
+    </script>
+</body>
+</html>
