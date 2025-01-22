@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clobber!</title>
+</head>
+<body>
+    <a id="hello" prefix="malicious1.js">console.log("clobbered1")</a> 
+    <a id="hello()" prefix="malicious2.js">console.log("clobbered2")</a> 
+    <script>
+      class RelativeTimeElement extends HTMLElement {
+        constructor() {
+            super();
+    
+            // Track instances (optional)
+            this.instances = new Set();
+            this.instances.add(this);
+    
+            // Private fields for internal state (can also use WeakMaps if necessary)
+            this._shadowRoot = this.attachShadow ? this.attachShadow({ mode: 'open' }) : null;
+            this._internalState = false;
+        }
+        hello() {
+            console.log("hello");
+        }
+      }
+    
+      // Define the custom element
+      customElements.define('relative-time', RelativeTimeElement);
+      
+      // Usage Example
+      const relativeTimeElement = document.createElement('relative-time');
+      
+      // Accessing the 'prefix' getter
+      console.log(relativeTimeElement.hello()); // Output: 'about'
+      
+
+    </script>
+</body>
+</html>
