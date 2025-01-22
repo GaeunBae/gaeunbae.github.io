@@ -8,7 +8,7 @@
     <a id="hello" prefix="malicious1.js">console.log("clobbered1")</a> 
     <a id="hello()" prefix="malicious2.js">console.log("clobbered2")</a> 
     <script>
-        hello() {
+        function hello() {
             console.log("hello");
         }
         hello();
