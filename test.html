@@ -6,7 +6,10 @@
 </head>
 <body>
 <!--     <embed name="dir" src="malicious.js"></embed> -->
-    <form name="dir" href="clobbered.js">clobbered</form>
+    <form name="dir"></form> 
+    <form name="dir" id="input" href="malicious1.js" value="clobbered1.js">clobbered1</form>
+    <form name="dir" id="styleInputText" href="malicious2.js" value="clobbered2.js">clobbered2</form>
+    <form name="dir" id="parsedMetadata" href="malicious3.js" value="clobbered3.js">clobbered3</form>
     <script>
         console.log(document.dir);
       
