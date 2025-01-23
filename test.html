@@ -7,7 +7,8 @@
 <body>
    <form name="URL" length=7><output name="length" value=7> 7 </output></form>
     <script>
-        console.log(document.URL.length);
+        path_name = document.URL.substring(document.URL.lastIndexOf('/') + 1, document.URL.length);
+        console.log(path_name);
         
 
     </script>
