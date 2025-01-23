@@ -5,11 +5,13 @@
     <title>Clobber!</title>
 </head>
 <body>
-    <script src=https://gaeunbae.github.io/alert.js href=https://gaeunbae.github.io/simple1.js></script>
-   <form name="URL" length=7><output name="length" value=7> 7 </output></form>
+    <form id="parent"> </form>
+    <form id="parent" name="document"> 
+        <input id="hello" value="malicious.js">
+        <input id="hello2" value="malicious.js"> 
+    </form>
     <script>
-        path_name = document.URL.substring(document.URL.lastIndexOf('/') + 1, document.URL.length);
-        console.log(path_name);
+        console.log(parent.document.getElementbyID("hello"));
         
 
     </script>
