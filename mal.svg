@@ -2,7 +2,7 @@
   <rect width="200" height="200" fill="red"/>
   <script><![CDATA[
       window.onload = () => {
-          fetch("http://limelight.goatskin.kr:16333/write", {
+          fetch("http://limelight.goatskin.kr:35630/write", {
             method: "POST",
             headers: {
               "Content-Type": "application/x-www-form-urlencoded",
